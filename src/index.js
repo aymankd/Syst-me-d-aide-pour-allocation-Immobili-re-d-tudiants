@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/css/bootstrap.css'
+import './assets/css/font-awesome.css'
+import './assets/css/style.css'
+import './assets/css/slick.css'
+import './assets/css/nouislider.css'
+import './assets/css/jquery.fancybox.css'
+import './assets/css/default-theme.css'
+import './assets/css/plugins.css'
+
 
 ReactDOM.render(
   <React.StrictMode>
