@@ -309,7 +309,7 @@ img {
 
 /*Preloader*/
 #aa-preloader-area {
-  /*background-color: #F8F8F8;*/
+  background-color: #F8F8F8;
   position: fixed; 
   left: 0;
   right: 0;
@@ -317,7 +317,7 @@ img {
   bottom: 0;
   width: 100%;
   height: 100%;
-  /*z-index: 9999*/;
+  z-index: 9999;
 }
 
 .pulse {
@@ -325,14 +325,14 @@ img {
   position: relative;
   top: 44%;
 }
-/*
+
 .pulse:before, .pulse:after {
   content: '';
   width: 80px;
   height: 80px;
   border-radius: 500px;
   position: absolute;
-}*/
+}
 
 .pulse:before {
   -webkit-animation: pulse-outer 0.8s ease-in infinite;
@@ -902,15 +902,9 @@ img {
 /*==================
  PROMO BANNER SECTION
 ====================*/
-#img-hero{
-  background-image: url("../img/slider/3.png");
-  width: 100%;
-  height: 700px;
-  background-position: center center;
-}
 
 #aa-promo-banner {
-  background-image: url("../img/apprt1.jpg");
+  background-image: url("../img/promo-banner.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -3453,4 +3447,11 @@ img {
     left: 38%;  
   }
   
+}
+
+#img-hero{
+  background-image: url("../img/image_3.png");
+  width: 100%;
+  height: 700px;
+  background-position: center center;
 }
