@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import aboutUsImg from './assets/img/about-us.png';
+
 import './App.css';
 
 function App() {
@@ -152,7 +154,7 @@ function App() {
               <div class="aa-about-us-area">
                 <div class="row">
                   <div class="col-md-5">
-                    <div class="aa-about-us-left"><img src="assets/img/about-us.png" alt="website template image"/></div>
+                    <div class="aa-about-us-left"><img src={aboutUsImg}/></div>
                   </div>
                   <div class="col-md-7">
                     <div class="aa-about-us-right">
