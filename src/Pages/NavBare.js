@@ -12,10 +12,7 @@ function NavBare() {
               <div className="aa-header-area">
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div className="aa-header-left">
-                      <div className="aa-telephone-no"><span className="fa fa-phone"></span> 1-900-523-3564</div>
-                      <div className="aa-email hidden-xs"><span className="fa fa-envelope-o"></span> info@domain.com</div>
-                    </div>
+                   
                   </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <div className="aa-header-right"><a href="pages/register.php" className="aa-register">Register</a> <a href="pages/signin.php" className="aa-login">Login</a></div>
@@ -32,25 +29,18 @@ function NavBare() {
           <div className="container">
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span></button>
-              <a className="navbar-brand aa-logo" href="https://www.free-css.com/free-css-templates">Home <span>Property</span></a></div>
+              <a className="navbar-brand aa-logo" href="">e<span>Rent</span></a></div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">
-                <li className="active"><a href="https://www.free-css.com/free-css-templates">HOME</a></li>
-                <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">PROPERTIES <span className="caret"></span></a>
+                <li><a href="">Accueil</a></li>
+                <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Mes Annonces <span className="caret"></span></a>
                   <ul className="dropdown-menu" role="menu">
-                    <li><a href="pages/properties.php">PROPERTIES</a></li>
+                    <li><a href="pages/properties.php">Mes Annonces</a></li>
                     <li><a href="pages/properties-detail.php">PROPERTIES DETAIL</a></li>
                   </ul>
                 </li>
-                <li><a href="pages/gallery.php">GALLERY</a></li>
-                <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">BLOG <span className="caret"></span></a>
-                  <ul className="dropdown-menu" role="menu">
-                    <li><a href="pages/blog-archive.php">BLOG</a></li>
-                    <li><a href="pages/blog-single.php">BLOG DETAILS</a></li>
-                  </ul>
-                </li>
-                <li><a href="pages/contact.php">CONTACT</a></li>
-                <li><a href="pages/404.php">404 PAGE</a></li>
+               
+                <li className="active" ><a href="pages/404.php">PROPOSER UN LOGEMENT</a></li>
               </ul>
             </div>
           </div>
