@@ -1,4 +1,4 @@
-const express = require('express') 
+const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
@@ -11,9 +11,11 @@ const db = mysql.createPool({
     database:'prjtutore'
 })
 app.use(cors())
+app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.get('/Search', (req, res) => {
+app.post('/Search', (req, res) => {
+    console.log(req.body)
     const search = req.body.search
     const mode = req.body.mode
     const Catg = req.body.Catg
@@ -24,8 +26,8 @@ app.get('/Search', (req, res) => {
     
 
     if(search != 'Rabat' && search != 'Salé' && search != 'Kenitra' ){
-        const sql = "Select * from universite where nom = ? "
-        db.query(sql, [search], (err, result) => {
+        const sql = "Select * from universite where nom like ? "
+        db.query(sql, ["%"+search+"%"], (err, result) => {
             if(result.length !=0){
                 lat=result[0].latitude_univ
                 lag=result[0].longitude_univ
@@ -36,9 +38,9 @@ app.get('/Search', (req, res) => {
                     ct = "";
                     if(Catg != "all")
                         ct =" and type = '"+Catg+"' "
-                            
                     
-                sql2 = "SELECT *, getDistance(latitude_loc,longitude_loc, ?, ?) as distance FROM location where ( prix > ? and prix < ? ) and ( superficie > ? and superficie < ? ) "+md+ct+" HAVING distance < 1.5 ORDER BY distance"                
+                    
+                sql2 = "SELECT *, getDistance(latitude_loc,longitude_loc, ?, ?) as distance FROM location where ( prix >= ? and prix <= ? ) and ( superficie >= ? and superficie <= ? ) "+md+ct+" HAVING distance < 1.5 ORDER BY distance"                
                 db.query(sql2, [lat,lag,prL,prU,supL,supU], (err2, result2) => {
                     if(result2.length !=0){
                         res.send({res:result2, msg:0})
