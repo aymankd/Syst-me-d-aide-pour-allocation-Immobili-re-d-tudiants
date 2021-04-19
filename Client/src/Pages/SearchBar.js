@@ -38,17 +38,13 @@ export default class SearchBar extends React.Component{
       suggestions,
       text:value
       }));
-    console.log(this.state)
-    //console.log(this.supL.current.innerHTML)
   }
   onModChange = (e) => {
     const value = e.target.value;
-
     this.setState(() => ({
       ...this.state,
       mode:value,
       }));
-      console.log(this.state)
   }
   onCatChange = (e) => {
     const value = e.target.value;
@@ -57,28 +53,19 @@ export default class SearchBar extends React.Component{
       ...this.state,
       cat:value,
       }));
-      console.log(this.state)
   }
   Submit = (e) => {
   Axious.post('http://localhost:3001/Search', {
-    search:this.state.text,
-    mode:this.state.mode,
-    Catg:this.state.cat,
-    supL: parseInt(this.supL.current.innerHTML),
-    supU: parseInt(this.supU.current.innerHTML),
-    prL: parseInt(this.prL.current.innerHTML),
-    prU: parseInt(this.prU.current.innerHTML)
-  }).then((result) => {
-    console.log(result)
-  })
-    console.log(this.state)
-    console.log("Search : "+this.state.text)
-    console.log("Mode : "+this.state.mode)
-    console.log("Categorie : "+this.state.cat)
-    console.log("supL : "+this.supL.current.innerHTML)
-    console.log("supU : "+this.supU.current.innerHTML)
-    console.log("prL : "+this.prL.current.innerHTML)
-    console.log("prU : "+this.prU.current.innerHTML)
+      search:this.state.text,
+      mode:this.state.mode,
+      Catg:this.state.cat,
+      supL: parseInt(this.supL.current.innerHTML),
+      supU: parseInt(this.supU.current.innerHTML),
+      prL: parseInt(this.prL.current.innerHTML),
+      prU: parseInt(this.prU.current.innerHTML)
+    }).then((result) => {
+      console.log(result.data)
+    })
   }
 
 
