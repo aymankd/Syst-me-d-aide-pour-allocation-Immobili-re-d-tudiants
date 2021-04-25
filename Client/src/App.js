@@ -9,7 +9,7 @@ import { BrowserRouter as Router,
 //pages
 import NavBare from './Pages/NavBare';
 import HomeA from './Pages/HomeA';
-
+import ResultPage from './Pages/ResultPage';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Router>
           <NavBare/>
           <Route exact path="/" component = {HomeA} /> 
+          <Route exact path="/ResultPage" component = {ResultPage} /> 
         </Router>
     </div>
   );
