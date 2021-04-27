@@ -3,7 +3,6 @@ import SearchBar from "./SearchBar.js"
 
 
 function ResultPage() {
-
   return (
   <div id="res-comp">
       <section id="aa-slider">
