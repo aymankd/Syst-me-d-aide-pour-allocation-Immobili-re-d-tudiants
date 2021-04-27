@@ -4099,10 +4099,22 @@ ul.activity {
     position: absolute;
     top: 18px;
     right: 24px; }
+#fixed-map{
 
-.listing-map .map-canvas {
-  height: 500px; 
+  float: right;
+  right:0px;
+
 }
+
+.fixedmap{
+  position: fixed;
+}
+ .map-canvas{
+      background-color: rgb(36, 13, 139);
+      height: 800px; 
+}
+
+
 
 .column {
   height: 100%;  /*allows both columns to span the full height of the browser window*/
@@ -4113,10 +4125,7 @@ ul.activity {
   position: relative;
 }
 
-.map-canvas{
-  background-color: rgb(196, 197, 194);
-  height: 800px;
-}
+
 
 
 

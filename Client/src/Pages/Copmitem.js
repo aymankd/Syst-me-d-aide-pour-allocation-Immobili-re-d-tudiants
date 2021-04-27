@@ -12,7 +12,7 @@ function Copmitem() {
                                           alt="website template image1" /></a>
                                   <div className="aa-tag for-sale">For Rent</div>
                                   <div className="aa-properties-item-content">
-                                      <div className="aa-properties-info"><span><i class="fas fa-door-open"></i>5 Rooms</span> <span><i class="fa fa-bed" aria-hidden="true"></i> 2 Beds</span> <span>3 Baths</span><span>1100 SQ FT</span></div>
+                                      <div className="aa-properties-info"><span><i className="fas fa-door-open"></i>5 Rooms</span> <span><i className="fa fa-bed" aria-hidden="true"></i> 2 Beds</span> <span>3 Baths</span><span>1100 SQ FT</span></div>
                                       <div className="aa-properties-about">
                                           <h3><a href="/">Appartment Title</a>
                                           </h3>
