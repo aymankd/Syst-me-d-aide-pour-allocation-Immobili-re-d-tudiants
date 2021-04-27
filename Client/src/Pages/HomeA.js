@@ -10,9 +10,9 @@ return (
               <div className="aa-top-slider">
                   <div className="aa-top-slider-single">
                       <div id="img-hero">
-
-                          <SearchBar></SearchBar>
-
+                        <div id="msb-land">
+                        <SearchBar></SearchBar>
+                        </div>
                       </div>
                   </div>
 
