@@ -4121,9 +4121,7 @@ ul.activity {
   display: flex;
   flex-direction: column;  /*places the left and right headers above the bottom content*/
 }
-#main-res{
-  position: relative;
-}
+
 
 
 
