@@ -1,6 +1,14 @@
 import React from "react";
 import Axious from 'axios';
 import { useHistory } from "react-router-dom";
+import {  makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+
+
+function valuetext(value) {
+    return `${value}°C`;
+  }
 
 function SearchBar({props}) {
   let hr = useHistory();
@@ -12,16 +20,23 @@ function SearchBar({props}) {
   const searchinp = React.createRef()
   const categoryinp = React.createRef()
   const modeinp = React.createRef()
+
+  const useStyles = makeStyles({
+    root: {
+      width: 500,
+    },
+  });
+
   
   const Submit = () => {
     Axious.post('http://localhost:3001/Search', {
         search:searchinp.current.value,
         mode:modeinp.current.value,
         Catg:categoryinp.current.value,
-        supL: parseInt(supL.current.innerHTML),
-        supU: parseInt(supU.current.innerHTML),
-        prL: parseInt(prL.current.innerHTML),
-        prU: parseInt(prU.current.innerHTML)
+        supL: superf[0],
+        supU: superf[1],
+        prL: prix[0],
+        prU: prix[1]
       }).then((result) => {
        
       hr.push({
@@ -32,6 +47,17 @@ function SearchBar({props}) {
       
       
     }
+
+    const classes = useStyles();
+    const [prix, setprix] = React.useState([1000, 3500]);
+    const [superf, setsuper] = React.useState([20, 250]);
+  
+    const handleprixChange = (event, newValue) => {
+        setprix(newValue);
+      };
+    const handlesuperChange = (event, newValue) => {
+        setsuper(newValue);
+    };
 
   return (
     <div className="bg-gray">
@@ -74,22 +100,49 @@ function SearchBar({props}) {
                                 </div>
                             </div>
                         </div>
+
+
+
+                        
+
+                        
+
+
+
                         <div className="aa-advance-search-bottom">
                             <div className="row">
                                 <div className="col-md-6">
-                                    <div className="aa-single-filter-search"><span>AREA (SQ)</span> <span>FROM</span> <span
-                                            id="skip-value-lower" ref={supL} className="example-val">0.00</span> <span>TO</span> <span
-                                            id="skip-value-upper" ref={supU}  className="example-val">100.00</span>
-                                        <div id="aa-sqrfeet-range"
-                                            className="noUi-target noUi-ltr noUi-horizontal noUi-background"></div>
+                                    <div className={classes.root}>
+                                        <Typography id="range-slider" gutterBottom>
+                                            Prix
+                                        </Typography>
+                                        <Slider
+                                            value={prix}
+                                            onChange={handleprixChange}
+                                            valueLabelDisplay="auto"
+                                            aria-labelledby="range-slider"
+                                            getAriaValueText={valuetext}
+                                            min={0}
+                                            max={5000}
+                                            step={500}
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="aa-single-filter-search"><span>PRICE ($)</span> <span>FROM</span> <span
-                                            id="skip-value-lower2" ref={prL} className="example-val">30.00</span> <span>TO</span>
-                                        <span id="skip-value-upper2" ref={prU} className="example-val">100.00</span>
-                                        <div id="aa-price-range"
-                                            className="noUi-target noUi-ltr noUi-horizontal noUi-background"></div>
+                                    <div className={classes.root}>
+                                        <Typography id="range-slider" gutterBottom>
+                                            Superficie
+                                        </Typography>
+                                        <Slider
+                                            value={superf}
+                                            onChange={handlesuperChange}
+                                            valueLabelDisplay="auto"
+                                            aria-labelledby="range-slider"
+                                            getAriaValueText={valuetext}
+                                            min={0}
+                                            max={300}
+                                            step={10}
+                                        />
                                     </div>
                                 </div>
                             </div>
