@@ -4109,9 +4109,13 @@ ul.activity {
 .fixedmap{
   position: fixed;
 }
- .map-canvas{
+.map-canvas{
       background-color: rgb(36, 13, 139);
       height: 800px; 
+}
+.slide-title{
+  font-size: 15px;
+  font-weight: 500;
 }
 
 

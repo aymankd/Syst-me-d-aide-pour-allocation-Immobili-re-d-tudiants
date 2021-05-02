@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 
 
+
 function valuetext(value) {
     return `${value}°C`;
   }
@@ -21,11 +22,43 @@ function SearchBar({props}) {
   const categoryinp = React.createRef()
   const modeinp = React.createRef()
 
-  const useStyles = makeStyles({
+  const useStyles = makeStyles(theme => ({
     root: {
-      width: 500,
+      width: 500
     },
-  });
+    margin: {
+      height: theme.spacing(3)
+    },
+    thumb: {
+      background: "#ff871c",
+      height: 20,
+      width: 20,
+      border: '2px solid orange',     marginTop: -8,     marginLeft: -12,
+      "&~&": {
+        background: "#ff871c"
+      }
+    },
+    mark: {
+      background: "#ff871c"
+    },
+    rail: {
+      background: "linear-gradient(to right, #ff871c, orange 50%, orange 50%, #ff871c);",
+      borderRedius: 4,
+      height: 8
+    },
+    track: {
+      background: "#ff871c",
+      borderRedius: 4,
+      height: 8
+    },
+    valueLabel: {
+      left: '-50%',
+      "&>*": {
+        background: "#ff871c",
+      }
+    }
+  }));
+  
 
   
   const Submit = () => {
@@ -113,10 +146,11 @@ function SearchBar({props}) {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className={classes.root}>
-                                        <Typography id="range-slider" gutterBottom>
-                                            Prix
-                                        </Typography>
+                                        <span className="slide-title">
+                                            Superficie
+                                        </span>
                                         <Slider
+                                            classes = {classes}
                                             value={prix}
                                             onChange={handleprixChange}
                                             valueLabelDisplay="auto"
@@ -130,10 +164,11 @@ function SearchBar({props}) {
                                 </div>
                                 <div className="col-md-6">
                                     <div className={classes.root}>
-                                        <Typography id="range-slider" gutterBottom>
-                                            Superficie
-                                        </Typography>
+                                        <span className="slide-title">
+                                            Prix
+                                        </span>
                                         <Slider
+                                            classes = {classes}
                                             value={superf}
                                             onChange={handlesuperChange}
                                             valueLabelDisplay="auto"
