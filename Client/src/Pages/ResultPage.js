@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import SearchBar from "./SearchBar.js"
 import Copmitem from './Copmitem';
 var body=null;
 
 
-function ResultPage() { 
+function ResultPage(props) { 
+
   window.addEventListener('scroll', (event) =>{
     if(window.pageYOffset>520){
       body.current.classList.add("fixedmap")
@@ -13,6 +14,10 @@ function ResultPage() {
       body.current.classList.remove("fixedmap")
     }
   }) 
+  
+  const [logements, setlogements]= useState({})
+
+console.log(props.location.state.res.res);
 
 
   body=useRef()
