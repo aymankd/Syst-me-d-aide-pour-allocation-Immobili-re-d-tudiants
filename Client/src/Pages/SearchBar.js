@@ -25,11 +25,9 @@ function SearchBar({props}) {
       }).then((result) => {
        
       hr.push({
-
         pathname : '/ResultPage',
-        state : { res : result.data }
+        state : { res : result.data  }
       })
-        console.log(result.data)
       })
       
       

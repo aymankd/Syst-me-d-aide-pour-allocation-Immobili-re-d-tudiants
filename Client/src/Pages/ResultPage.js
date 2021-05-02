@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import SearchBar from "./SearchBar.js"
 import Copmitem from './Copmitem';
+import MyMap from './MyMap';
 var body=null;
 
 
@@ -14,12 +15,25 @@ function ResultPage(props) {
       body.current.classList.remove("fixedmap")
     }
   }) 
+
+
+
+  var logements = []
+
+  if(typeof props.location.state !== 'undefined'){
+    logements = props.location.state.res.res
+  }
+  console.log(logements)
+
+  var Markers = [];
   
-  const [logements, setlogements]= useState({})
+  logements.forEach(element => {
+    Markers.push({ lat: parseFloat(element.latitude_loc), lng: parseFloat(element.longitude_loc) })
+  });
 
-console.log(props.location.state.res.res);
+  
 
-
+    
   body=useRef()
   return (
   <div id="res-comp">
@@ -45,7 +59,7 @@ console.log(props.location.state.res.res);
               <div className="half-map-full">
                 <br></br>
                 <div className="map-canvas h-100vh" >
-                   
+                <MyMap markers={Markers}/>   
                 </div>
               </div>
             </div>
@@ -60,15 +74,11 @@ console.log(props.location.state.res.res);
                   </select> 
               </div>
               <div className="scrollbar scroll_dark h-100vh">
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
-                 <Copmitem></Copmitem>
+
+                {logements.map((item, index) => (
+                    <Copmitem key={index} data = {item}></Copmitem>
+                ))}
+
                </div>
             </div>
           </div>
