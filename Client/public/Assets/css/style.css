@@ -780,6 +780,11 @@ img {
 .aa-properties-item:hover {
   box-shadow: 1px 2px 5px 3px #ccc;
 }
+
+.item-onhover {
+  box-shadow: 1px 2px 5px 3px #ccc;
+}
+
 .aa-properties-item .aa-properties-item-img {
   width: 100%;
 }

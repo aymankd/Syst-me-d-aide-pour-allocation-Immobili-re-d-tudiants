@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoogleMap, useJsApiLoader ,Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader ,Marker ,InfoWindow  } from '@react-google-maps/api';
 
 const containerStyle = {
   
@@ -19,6 +19,9 @@ function MyMap(props) {
   })
 
   const [map, setMap] = React.useState(null)
+  const [selected, setselected] = React.useState()
+
+  
 
   const onLoad = React.useCallback(function callback(map) {
     setMap(map)
@@ -31,7 +34,7 @@ function MyMap(props) {
   return isLoaded ? (
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={center}
+        center={(props.markers[0]) ? props.markers[0] : center}
         zoom={16}
         onLoad={onLoad}
         onUnmount={onUnmount}
@@ -40,8 +43,18 @@ function MyMap(props) {
 
 
       {props.markers.map((pos, index) => (
-                  <Marker key={index} position = {pos}></Marker>
+                  <Marker key={index} position = {pos} onClick={()=>setselected(pos)} icon={'Assets/img/homeicon.png'}>
+                    
+                    <InfoWindow >   
+                      <div >   
+                          lkshjdfs               
+                      </div>                    
+                    </InfoWindow>         
+                  </Marker>
         ))}
+                  
+            
+      
 
         
       </GoogleMap>
