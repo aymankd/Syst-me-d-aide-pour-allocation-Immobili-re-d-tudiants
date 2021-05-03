@@ -4,84 +4,10 @@ function seemore() {
 
   return (
 <div>
-  <div id="aa-preloader-area">
-    <div className="pulse"></div>
-  </div>
-
-    <a className="scrollToTop" href="#"><i className="fa fa-angle-double-up"></i></a>
 
 
-  <header id="aa-header">  
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="aa-header-area">
-            <div className="row">
-              <div className="col-md-6 col-sm-6 col-xs-6">
-                <div className="aa-header-left">
-                  <div className="aa-telephone-no">
-                    <span className="fa fa-phone"></span>
-                    1-900-523-3564
-                  </div>
-                  <div className="aa-email hidden-xs">
-                    <span className="fa fa-envelope-o"></span> info@markups.com
-                  </div>
-                </div>              
-              </div>
-              <div className="col-md-6 col-sm-6 col-xs-6">
-                <div className="aa-header-right">
-                  <a href="register.html" className="aa-register">Register</a>
-                  <a href="signin.html" className="aa-login">Login</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
  
-  <section id="aa-menu-area">
-    <nav className="navbar navbar-default main-navbar" role="navigation">  
-      <div className="container">
-        <div className="navbar-header">
-          
-          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-          
-          <a className="navbar-brand aa-logo" href="index.html"> Home <span>Property</span></a>
-          
-          <a className="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"/></a>                  
-        </div>
-        <div id="navbar" className="navbar-collapse collapse">
-          <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
-             <li className="dropdown active">
-              <a className="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span className="caret"></span></a>
-              <ul className="dropdown-menu" role="menu">                
-                <li><a href="properties.html">PROPERTIES</a></li>
-                <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>                                            
-              </ul>
-            </li>
-            <li><a href="gallery.html">GALLERY</a></li>                                         
-            <li className="dropdown">
-              <a className="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span className="caret"></span></a>
-              <ul className="dropdown-menu" role="menu">                
-                <li><a href="blog-archive.html">BLOG</a></li>
-                <li><a href="blog-single.html">BLOG DETAILS</a></li>                                            
-              </ul>
-            </li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="404.html">404 PAGE</a></li>
-          </ul>                               
-        </div>      
-      </div>          
-    </nav> 
-  </section>
+
 
 
   <section id="aa-property-header">
@@ -135,7 +61,7 @@ function seemore() {
                <h4>Property Video</h4>
                <iframe width="100%" height="480" src="https://www.youtube.com/embed/CegXQps0In4" frameborder="0" allowfullscreen></iframe>
                <h4>Property Map</h4>
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256" width="100%" height="450" frameborder="0"  allowfullscreen></iframe>
              </div>
 
              <div className="aa-properties-social">
