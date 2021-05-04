@@ -23,12 +23,14 @@ function ResultPage(props) {
   if(typeof props.location.state !== 'undefined'){
     logements = props.location.state.res.res
   }
-  console.log(logements)
+  var datas = [];
+
 
   var Markers = [];
   
   logements.forEach(element => {
     Markers.push({ lat: parseFloat(element.latitude_loc), lng: parseFloat(element.longitude_loc) })
+    datas.push({ titre : element.titre, prix: element.prix , type : element.type, superficie : element.superficie, mode : element.mode })
   });
 
   
@@ -59,7 +61,7 @@ function ResultPage(props) {
               <div className="half-map-full">
                 <br></br>
                 <div className="map-canvas h-100vh" >
-                <MyMap markers={Markers}/>   
+                <MyMap markers={Markers} datas={datas}/>   
                 </div>
               </div>
             </div>

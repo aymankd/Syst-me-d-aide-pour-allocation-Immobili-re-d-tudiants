@@ -15,8 +15,8 @@ function NavBare() {
 
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-xs-6">
-                                    <div className="aa-header-right"><a href="pages/register.php"
-                                            className="aa-register">Register</a> <a href="pages/signin.php"
+                                    <div className="aa-header-right"><a href="#"
+                                            className="aa-register">Register</a> <a href="#"
                                             className="aa-login">Login</a></div>
                                 </div>
                             </div>
@@ -41,12 +41,13 @@ function NavBare() {
                             <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="">Mes
                                     Annonces <span className="caret"></span></a>
                                 <ul className="dropdown-menu" role="menu">
-                                    <li><a href="pages/properties.php">Mes Annonces</a></li>
-                                    <li><a href="pages/properties-detail.php">PROPERTIES DETAIL</a></li>
+                                
+                                    <li><a href="#">Mes Annonces</a></li>
+                                    <li><a href="#">PROPERTIES DETAIL</a></li>
                                 </ul>
                             </li>
 
-                            <li className="active"><a href="pages/404.php">PROPOSER UN LOGEMENT</a></li>
+                            <li className="active"><a href="#">PROPOSER UN LOGEMENT</a></li>
                         </ul>
                     </div>
                 </div>

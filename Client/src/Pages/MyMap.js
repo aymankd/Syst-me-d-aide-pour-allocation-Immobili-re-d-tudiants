@@ -12,7 +12,6 @@ const center = {
 };
 
 function MyMap(props) {
-  console.log(props.markers)
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyDKjkINKsGV9eXt7lmhpc9mE2vF_yZaou0"
@@ -47,7 +46,7 @@ function MyMap(props) {
                     
                     <InfoWindow >   
                       <div >   
-                          lkshjdfs               
+                       test          
                       </div>                    
                     </InfoWindow>         
                   </Marker>

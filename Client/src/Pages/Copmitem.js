@@ -1,9 +1,13 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import seemore from "./seemore";
 
 function Copmitem(props) {
-
- 
-
+  let hr = useHistory();
+  const voirplus = () => {
+    hr.push("/seemore")
+  }
+console.log();
 
 
   return (
@@ -28,9 +32,12 @@ function Copmitem(props) {
             <span className="aa-price">
               {props.data.prix} dh, {props.data.superficie} m²{" "}
             </span>{" "}
-            <a href="/" className="aa-secondary-btn">
-              View Details
-            </a>
+            <input
+                        className="aa-secondary-btn"
+                        onClick={voirplus}
+                        type="submit"
+                        value="Voir plus"
+                      />
           </div>
         </div>
       </article>

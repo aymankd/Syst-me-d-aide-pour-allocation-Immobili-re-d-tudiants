@@ -1,7 +1,7 @@
 import React from "react";
 
-function seemore() {
-
+function seemore(props) {
+console.log(props);
   return (
 <div>
 
@@ -150,59 +150,56 @@ function seemore() {
           <aside className="aa-properties-sidebar">
 
             <div className="aa-properties-single-sidebar">
-              <h3>Properties Search</h3>
+              <h3>Informations - Candidature</h3>
               <form action="">
+              <ul>
+                <li>
+                <i class="glyphicon glyphicon-user"></i>
                 <div className="aa-single-advance-search">
-                  <input type="text" placeholder="Type Your Location"/>
-                </div>
+                  <input type="text" placeholder="Nom"/>
+                  </div>
+               
+                </li>
+                    <li>
+                    <i class="glyphicon glyphicon-user"></i>
                 <div className="aa-single-advance-search">
-                  <select id="" name="">
-                   <option selected="" value="0">Category</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
+                  <input type="text" placeholder="Prénom"/>
                 </div>
+                </li>
+                    <li>
+                    <i class="glyphicon glyphicon-earphone"></i>
                 <div className="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
+                  <input type="text" placeholder="Telephone"/>
                 </div>
+                </li>
+                    <li> 
+                      <i class="glyphicon glyphicon-envelope"></i>
                 <div className="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
+                  <input type="text" placeholder="Email"/>
                 </div>
-                <div className="aa-single-filter-search">
-                  <span>AREA (SQ)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower" className="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" className="example-val">100.00</span>
-                  <div id="aa-sqrfeet-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
-                </div>
-                <div className="aa-single-filter-search">
-                  <span>PRICE ($)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower2" className="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper2" className="example-val">100.00</span>
-                  <div id="aa-price-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>      
-                </div>
+                </li>
+                    <li>
+                    <i class="glyphicon glyphicon-time"></i>
                 <div className="aa-single-advance-search">
-                  <input type="submit" value="Search" className="aa-search-btn"/>
+                      <select defaultValue="all">
+                        <option value="all" disable selected hidden>Periode</option>
+                        <option value="3mois">3 mois</option>
+                        <option value="6mois">6 mois </option>
+                        <option value="8mois">
+                          8 mois
+                        </option>
+                        <option value="1an">1 an</option>
+                      </select>
+                    </div>
+                    </li>
+                    <li>
+                      
+      
+                <div className="aa-single-advance-search">
+                  <input type="submit" value="Déposer mon dossier" className="aa-search-btn"/>
                 </div>
+                </li>
+                </ul>
               </form>
             </div> 
 

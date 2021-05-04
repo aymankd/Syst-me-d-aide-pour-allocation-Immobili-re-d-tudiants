@@ -99,14 +99,14 @@ function SearchBar({ props }) {
                       <input
                         type="text"
                         ref={searchinp}
-                        placeholder="Type Your Location"
+                        placeholder="Ville, université ..."
                       />
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="aa-single-advance-search">
                       <select defaultValue="all" ref={modeinp}>
-                        <option value="all">Mode</option>
+                        <option value="all" disable selected hidden>Mode</option>
                         <option value="Location">Location</option>
                         <option value="Colocation">Colocation</option>
                       </select>
@@ -115,7 +115,7 @@ function SearchBar({ props }) {
                   <div className="col-md-3">
                     <div className="aa-single-advance-search">
                       <select defaultValue="all" ref={categoryinp}>
-                        <option value="all">Category</option>
+                        <option value="all" disable selected hidden>Categorie</option>
                         <option value="Studio">Studio</option>
                         <option value="Appartement">Appartement</option>
                         <option value="Residences">
@@ -142,7 +142,7 @@ function SearchBar({ props }) {
                 <div className="row">
                   <div className="col-md-6">
                     <div className={classes.root}>
-                      <span className="slide-title">Superficie</span>
+                      <span className="slide-title">Prix (dh)</span>
                       <Slider
                         classes={classes}
                         value={prix}
@@ -157,7 +157,7 @@ function SearchBar({ props }) {
                   </div>
                   <div className="col-md-6">
                     <div className={classes.root}>
-                      <span className="slide-title">Prix</span>
+                      <span className="slide-title">Superficie (m²)</span>
                       <Slider
                         classes={classes}
                         value={superf}
